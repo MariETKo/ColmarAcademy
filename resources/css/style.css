@@ -34,10 +34,11 @@ p {
 .main {
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: space-between;
+
 }
 .container {
   display: flex;
+  margin: 0 auto;
   border: blue solid 1px;
 }
 .feature {
@@ -46,6 +47,12 @@ p {
   display: flex;
   flex-flow: column;
 }
+@media screen and (max-width:500px) {
+  .feature {
+    display: none;
+  }
+}
+
 .feature img,
 .feature video {
   display: block;
@@ -95,6 +102,8 @@ Header Navigation----------*/
 .menu {
   width:100%;
   margin: 1.5rem;
+}
+#DesktopNav {
   display: flex;
   justify-content: space-between;
 }
@@ -107,17 +116,28 @@ Header Navigation----------*/
   color: #d8d8d8;
   font-weight: 300;
 }
-
 #DesktopNav nav{
   display: flex;
 }
-
 #DesktopNav nav span{
   margin: 0 0.5rem;
 }
 
 #MobileNav {
   display: none;
+}
+/*--Mobile Display for Navigation--*/
+@media screen and (max-width:500px) {
+    #DesktopNav {
+      display: none;
+    }
+    #MobileNav {
+      display: block;
+    }
+    #MobileNav nav{
+      display: flex;
+      justify-content: space-between;
+    }
 }
 
 /*-------------------------
@@ -126,18 +146,15 @@ Main Banner----------------*/
   background-color: #d8d8d8;
 }
 #MainBanner .subfeature {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-
 }
 #MainBanner .subfeature h1{
   line-height: 2.5rem;
-  margin: 1rem;
+  margin: 2rem 1rem;
 }
 #MainBanner .subfeature h3{
-  margin: 1rem;
   line-height: 1.75rem;
+  margin: 0rem 1rem 1.5rem 1rem;
 }
 #SignUp {
   background-color: #4a4a4a;
@@ -146,6 +163,18 @@ Main Banner----------------*/
   width: 50%;
   padding: 0.5rem;
   margin: 1rem;
+}
+
+/*--Mobile Display for Banner--*/
+@media screen and (max-width:500px){
+  .MSpaceHolder{
+    height: 11.25rem;
+    background-color: #4a4a4a;
+  }
+  #SignUp {
+    width:90%;
+    margin-bottom: 2rem;
+  }
 }
 
 /*-------------------------
@@ -157,9 +186,34 @@ On Campus Info-------------*/
 #CampusInfo .quoteCaption{
   font-size: 0.75rem;
 }
-#MobileCampusInfo {
+.mobileImage {
   display: none;
 }
+
+/*--Mobile Display for Campus Info--*/
+@media screen and (max-width:500px){
+  .desktopImage {
+    display: none;
+  }
+  .mobileImage {
+    display: block;
+  }
+  #CampusInfo .subfeature{
+    margin: 1rem auto;
+  }
+  #CampusInfo .box{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1rem;
+  }
+  .box img {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+}
+
 
 /*-------------------------
 Academy Courses------------*/
@@ -173,7 +227,7 @@ Academy Courses------------*/
   justify-content: center;
 }
 .courseBox {
-  background-color: white;
+  background-color: #ffffff;
   width: 25%;
   margin: 0 1rem 1rem 1rem;
 }
@@ -183,7 +237,33 @@ Academy Courses------------*/
 #MobileCourseNav {
   display: none;
 }
-/*--Mobile Footer--*/
+/*--Mobile Display for Academy Courses--*/
+@media screen and (max-width:500px){
+  #Learn {
+    background-color: #ffffff;
+  }
+  #Learn .courses{
+    display: none;
+  }
+  #MobileCourseNav{
+    display: block;
+  }
+  #MobileCourseNav nav{
+    display: flex;
+  }
+  #MobileCourseNav ul{
+    width: 90%;
+    margin: 0 auto;
+  }
+  #MobileCourseNav li{
+    display: block;
+    background-color: #d8d8d8;
+    text-align: center;
+    color: #ffffff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+}
 
 
 /*-------------------------
@@ -191,6 +271,21 @@ Thesis Exhibit--*/
 #Thesis container {
   margin-bottom: 0.5rem;
 }
+
+/*--Mobile Thesis Exhibit--*/
+@media screen and (max-width:500px) {
+    #Thesis .feature {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 1.5rem;
+    }
+    #Thesis .textContent,
+    #Thesis .subfeature{
+   display: none;
+  }
+}
+
 /*-------------------------
 Footer---------------------*/
 footer {
@@ -209,7 +304,16 @@ footer {
 footer span:first-child{
   flex-grow: 2;
 }
+#MobileCopyWrite {
+  display: none;
+}
   /*--Mobile Footer--*/
-  footer span:nth-child(1n+2) {
-    color:red;
+  @media screen and (max-width:500px) {
+    #CopyWrite {
+      display: none;
+    }
+    #MobileCopyWrite {
+      display:block;
+      padding: 1rem;
+    }
   }
