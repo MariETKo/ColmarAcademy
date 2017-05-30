@@ -3,7 +3,8 @@ body {
   font-size: 18px;
   font-family: 'Montserrat','Arial', sans-serif;
 }
-/*--Universal Styling--*/
+/*-------------------------
+Universal Styling---------*/
 h1,
 h2,
 h3 {
@@ -86,7 +87,8 @@ p {
   padding: 2rem;
 }
 
-/*--Header Navigation--*/
+/*-------------------------
+Header Navigation----------*/
 #NavMenu {
   height: 4rem;
 }
@@ -118,7 +120,8 @@ p {
   display: none;
 }
 
-/*--Main Banner--*/
+/*-------------------------
+Main Banner----------------*/
 #MainBanner {
   background-color: #d8d8d8;
 }
@@ -145,7 +148,8 @@ p {
   margin: 1rem;
 }
 
-/*--On Campus Info--*/
+/*-------------------------
+On Campus Info-------------*/
 #CampusInfo .readMore {
   color: #3399ff;
   font-size: 0.75rem;
@@ -153,10 +157,15 @@ p {
 #CampusInfo .quoteCaption{
   font-size: 0.75rem;
 }
-/*--Academy Courses--*/
+#MobileCampusInfo {
+  display: none;
+}
+
+/*-------------------------
+Academy Courses------------*/
 #Learn {
   background-color: #d8d8d8;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 .courses {
   margin: 0 auto;
@@ -166,18 +175,24 @@ p {
 .courseBox {
   background-color: white;
   width: 25%;
-  margin: 0 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 .courseBox img {
   width:100%;
 }
+#MobileCourseNav {
+  display: none;
+}
+/*--Mobile Footer--*/
 
 
-/*--Thesis Exhibit--*/
+/*-------------------------
+Thesis Exhibit--*/
 #Thesis container {
   margin-bottom: 0.5rem;
 }
-/*--Footer--*/
+/*-------------------------
+Footer---------------------*/
 footer {
   border-top: gray solid 1px;
   font-size: 0.75rem;
@@ -193,5 +208,8 @@ footer {
 }
 footer span:first-child{
   flex-grow: 2;
-
 }
+  /*--Mobile Footer--*/
+  footer span:nth-child(1n+2) {
+    color:red;
+  }
