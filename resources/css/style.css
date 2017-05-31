@@ -34,16 +34,15 @@ p {
 .main {
   max-width: 1200px;
   margin: 0 auto;
-
 }
 .container {
   display: flex;
   margin: 0 auto;
-  border: blue solid 1px;
+  /*border: blue solid 1px;*/
 }
 .feature {
   width: 60%;
-  margin: 1.5rem;
+  margin: 1rem 1.5rem;
   display: flex;
   flex-flow: column;
 }
@@ -61,14 +60,25 @@ p {
 }
 
 .subfeature {
-  width: 423px;
+  max-width: 423px;
   display: flex;
   flex-flow: column;
+  margin: 0;
 }
 
 .box {
   display: flex;
-  border: gray solid 1px;
+}
+.box:nth-child(2n+0){
+  border-top: gray solid 1px;
+  border-bottom: gray solid 1px;
+}
+
+@media screen and (max-width:500px) {
+  .box:nth-child(2n+0) {
+    border-style: none;
+  }
+
 }
 .box:hover {
   background-color: #d8d8d8;
@@ -77,7 +87,7 @@ p {
 .box img {
   width: 35%;
   height: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .textContent {
@@ -92,6 +102,11 @@ p {
 .sectionHeader {
   text-align: center;
   padding: 2rem;
+}
+@media screen and (max-width:500px) {
+  .sectionHeader {
+    padding: 2rem 0 1rem 0;
+  }
 }
 
 /*-------------------------
@@ -144,6 +159,7 @@ Header Navigation----------*/
 Main Banner----------------*/
 #MainBanner {
   background-color: #d8d8d8;
+  padding-bottom: 1rem;
 }
 #MainBanner .subfeature {
   justify-content: center;
@@ -173,12 +189,21 @@ Main Banner----------------*/
   }
   #SignUp {
     width:90%;
+    padding:0.5rem 0;
     margin-bottom: 2rem;
   }
 }
 
 /*-------------------------
 On Campus Info-------------*/
+#CampusInfo .feature {
+  padding-top: 1rem;
+}
+#CampusInfo .subfeature {
+  padding-top: 1rem;
+  border-left: gray solid 1px;
+  border-right: gray solid 1px;
+}
 #CampusInfo .readMore {
   color: #3399ff;
   font-size: 0.75rem;
@@ -200,6 +225,7 @@ On Campus Info-------------*/
   }
   #CampusInfo .subfeature{
     margin: 1rem auto;
+    border-style: none;
   }
   #CampusInfo .box{
     display: flex;
@@ -268,20 +294,23 @@ Academy Courses------------*/
 
 /*-------------------------
 Thesis Exhibit--*/
-#Thesis container {
-  margin-bottom: 0.5rem;
+#Thesis .box {
+  border-style: none;
+}
+#Thesis video{
+  border: gray solid 1px;
 }
 
 /*--Mobile Thesis Exhibit--*/
 @media screen and (max-width:500px) {
-    #Thesis .feature {
+  #Thesis .feature {
       display: block;
       width: 100%;
       margin: 0 auto;
-      padding-bottom: 1.5rem;
+      padding: 1rem 0 1.5rem 0;
     }
-    #Thesis .textContent,
-    #Thesis .subfeature{
+  #Thesis .textContent,
+  #Thesis .subfeature{
    display: none;
   }
 }
@@ -308,12 +337,12 @@ footer span:first-child{
   display: none;
 }
   /*--Mobile Footer--*/
-  @media screen and (max-width:500px) {
-    #CopyWrite {
+@media screen and (max-width:500px) {
+  #CopyWrite {
       display: none;
     }
-    #MobileCopyWrite {
+  #MobileCopyWrite {
       display:block;
       padding: 1rem;
     }
-  }
+}
